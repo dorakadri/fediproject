@@ -1,0 +1,8 @@
+<div *ngFor="let film of tabFilms">
+  <h3>{{ film.nom }}</h3>
+  <app-detail-film *ngIf="film.descVisible" [film]="film"></app-detail-film>
+  <button (click)="film.descVisible = !film.descVisible">  {{ film.descVisible ? 'Moins d\'info' : 'Plus d\'info' }}
+</button>
+  
+
+</div>

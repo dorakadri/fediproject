@@ -1,0 +1,6 @@
+<div *ngFor="let film of tabFilms">
+    <h3>{{ film.nom }}</h3>
+    <button  (click)="deleteFilm(film)" >Supprimer</button>
+    <a [routerLink]="['/admin/details', film.id]">details</a>
+    <button  [routerLink]="['/admin/modifier', film.id]" >Modifier</button>
+  </div>
